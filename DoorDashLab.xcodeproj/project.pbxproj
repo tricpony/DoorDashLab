@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D14BF1BE22C61ABF0002F2D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1BD22C61ABF0002F2D3 /* AppDelegate.swift */; };
-		D14BF1C122C61ABF0002F2D3 /* DoorDashLab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1BF22C61ABF0002F2D3 /* DoorDashLab.xcdatamodeld */; };
-		D14BF1C322C61ABF0002F2D3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1C222C61ABF0002F2D3 /* MasterViewController.swift */; };
-		D14BF1C522C61ABF0002F2D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1C422C61ABF0002F2D3 /* DetailViewController.swift */; };
+		08CDBD772CF330BB97336E32 /* Pods_DoorDashLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E01089416459CB9B0480C3 /* Pods_DoorDashLab.framework */; };
+		BCE90F53A1DDDD75164899B3 /* libPods-DoorDashLabTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A0D5BEB3505FD50FCF1A84 /* libPods-DoorDashLabTests.a */; };
 		D14BF1C822C61ABF0002F2D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14BF1C622C61ABF0002F2D3 /* Main.storyboard */; };
 		D14BF1CA22C61AC10002F2D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14BF1C922C61AC10002F2D3 /* Assets.xcassets */; };
 		D14BF1CD22C61AC10002F2D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14BF1CB22C61AC10002F2D3 /* LaunchScreen.storyboard */; };
 		D14BF1D822C61AC10002F2D3 /* DoorDashLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1D722C61AC10002F2D3 /* DoorDashLabTests.swift */; };
+		D14BF1EB22C61C650002F2D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1E522C61C650002F2D3 /* AppDelegate.swift */; };
+		D14BF1EC22C61C650002F2D3 /* DoorDashLab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1E922C61C650002F2D3 /* DoorDashLab.xcdatamodeld */; };
+		D14BF1F222C61F010002F2D3 /* ExploreMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1F122C61F010002F2D3 /* ExploreMapViewController.swift */; };
+		D14BF1F422C61F570002F2D3 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1F322C61F570002F2D3 /* ExploreViewController.swift */; };
+		D14BF1F622C61F780002F2D3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF1F522C61F780002F2D3 /* FavoritesViewController.swift */; };
+		D14BF1F822C61F860002F2D3 /* FavoritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14BF1F722C61F860002F2D3 /* FavoritesViewController.storyboard */; };
+		D14BF1FA22C61F990002F2D3 /* ExploreViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14BF1F922C61F990002F2D3 /* ExploreViewController.storyboard */; };
+		D14BF1FC22C6210E0002F2D3 /* ExploreMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14BF1FB22C6210E0002F2D3 /* ExploreMapViewController.storyboard */; };
+		D14BF20322C626CB0002F2D3 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20122C626CB0002F2D3 /* Store+CoreDataProperties.swift */; };
+		D14BF20422C626CB0002F2D3 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20222C626CB0002F2D3 /* Store+CoreDataClass.swift */; };
+		D14BF20622C633050002F2D3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20522C633050002F2D3 /* API.swift */; };
+		D14BF20822C633140002F2D3 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20722C633140002F2D3 /* ServiceManager.swift */; };
+		D14BF20B22C634EC0002F2D3 /* JsonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20A22C634EC0002F2D3 /* JsonUtility.swift */; };
+		D14BF20D22C63EB20002F2D3 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20C22C63EB20002F2D3 /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3807FA62E6535D778C56BD98 /* Pods-DoorDashLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDashLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoorDashLab/Pods-DoorDashLab.debug.xcconfig"; sourceTree = "<group>"; };
+		40A0D5BEB3505FD50FCF1A84 /* libPods-DoorDashLabTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoorDashLabTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4358C21766454639BF737593 /* Pods-DoorDashLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDashLabTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoorDashLabTests/Pods-DoorDashLabTests.release.xcconfig"; sourceTree = "<group>"; };
+		61A96788C1C692F9192739AE /* Pods-DoorDashLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDashLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoorDashLab/Pods-DoorDashLab.release.xcconfig"; sourceTree = "<group>"; };
+		66E01089416459CB9B0480C3 /* Pods_DoorDashLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorDashLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		991622A10C030EDA3379F8BD /* Pods-DoorDashLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDashLabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoorDashLabTests/Pods-DoorDashLabTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D14BF1BA22C61ABF0002F2D3 /* DoorDashLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDashLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D14BF1BD22C61ABF0002F2D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D14BF1C022C61ABF0002F2D3 /* DoorDashLab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoorDashLab.xcdatamodel; sourceTree = "<group>"; };
-		D14BF1C222C61ABF0002F2D3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		D14BF1C422C61ABF0002F2D3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D14BF1C722C61ABF0002F2D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D14BF1C922C61AC10002F2D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D14BF1CC22C61AC10002F2D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +54,20 @@
 		D14BF1D322C61AC10002F2D3 /* DoorDashLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorDashLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14BF1D722C61AC10002F2D3 /* DoorDashLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDashLabTests.swift; sourceTree = "<group>"; };
 		D14BF1D922C61AC10002F2D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D14BF1E522C61C650002F2D3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D14BF1EA22C61C650002F2D3 /* DoorDashLab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoorDashLab.xcdatamodel; sourceTree = "<group>"; };
+		D14BF1F122C61F010002F2D3 /* ExploreMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMapViewController.swift; sourceTree = "<group>"; };
+		D14BF1F322C61F570002F2D3 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		D14BF1F522C61F780002F2D3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		D14BF1F722C61F860002F2D3 /* FavoritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesViewController.storyboard; sourceTree = "<group>"; };
+		D14BF1F922C61F990002F2D3 /* ExploreViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreViewController.storyboard; sourceTree = "<group>"; };
+		D14BF1FB22C6210E0002F2D3 /* ExploreMapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreMapViewController.storyboard; sourceTree = "<group>"; };
+		D14BF20122C626CB0002F2D3 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D14BF20222C626CB0002F2D3 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D14BF20522C633050002F2D3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D14BF20722C633140002F2D3 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D14BF20A22C634EC0002F2D3 /* JsonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtility.swift; sourceTree = "<group>"; };
+		D14BF20C22C63EB20002F2D3 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08CDBD772CF330BB97336E32 /* Pods_DoorDashLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +83,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE90F53A1DDDD75164899B3 /* libPods-DoorDashLabTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28A13E2F431791263CE1C681 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3807FA62E6535D778C56BD98 /* Pods-DoorDashLab.debug.xcconfig */,
+				61A96788C1C692F9192739AE /* Pods-DoorDashLab.release.xcconfig */,
+				991622A10C030EDA3379F8BD /* Pods-DoorDashLabTests.debug.xcconfig */,
+				4358C21766454639BF737593 /* Pods-DoorDashLabTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D14BF1B122C61ABF0002F2D3 = {
 			isa = PBXGroup;
 			children = (
 				D14BF1BC22C61ABF0002F2D3 /* DoorDashLab */,
 				D14BF1D622C61AC10002F2D3 /* DoorDashLabTests */,
 				D14BF1BB22C61ABF0002F2D3 /* Products */,
+				28A13E2F431791263CE1C681 /* Pods */,
+				E73C035B07360740BDCB8D8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +124,15 @@
 		D14BF1BC22C61ABF0002F2D3 /* DoorDashLab */ = {
 			isa = PBXGroup;
 			children = (
-				D14BF1BD22C61ABF0002F2D3 /* AppDelegate.swift */,
-				D14BF1C222C61ABF0002F2D3 /* MasterViewController.swift */,
-				D14BF1C422C61ABF0002F2D3 /* DetailViewController.swift */,
+				D14BF1E422C61C650002F2D3 /* Application */,
+				D14BF1E622C61C650002F2D3 /* Common */,
+				D14BF1E222C61C650002F2D3 /* Map */,
+				D14BF1E822C61C650002F2D3 /* Model */,
+				D14BF1E322C61C650002F2D3 /* Tabs */,
 				D14BF1C622C61ABF0002F2D3 /* Main.storyboard */,
 				D14BF1C922C61AC10002F2D3 /* Assets.xcassets */,
 				D14BF1CB22C61AC10002F2D3 /* LaunchScreen.storyboard */,
 				D14BF1CE22C61AC10002F2D3 /* Info.plist */,
-				D14BF1BF22C61ABF0002F2D3 /* DoorDashLab.xcdatamodeld */,
 			);
 			path = DoorDashLab;
 			sourceTree = "<group>";
@@ -102,6 +146,112 @@
 			path = DoorDashLabTests;
 			sourceTree = "<group>";
 		};
+		D14BF1E222C61C650002F2D3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF1F122C61F010002F2D3 /* ExploreMapViewController.swift */,
+				D14BF1FB22C6210E0002F2D3 /* ExploreMapViewController.storyboard */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		D14BF1E322C61C650002F2D3 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF1EF22C61E660002F2D3 /* Explore */,
+				D14BF1EE22C61E210002F2D3 /* Favorites */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		D14BF1E422C61C650002F2D3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF1E522C61C650002F2D3 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D14BF1E622C61C650002F2D3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF20922C634D40002F2D3 /* JSON */,
+				D14BF1F022C61EBF0002F2D3 /* Core */,
+				D14BF1ED22C61E020002F2D3 /* Extensions */,
+				D14BF1E722C61C650002F2D3 /* Network */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D14BF1E722C61C650002F2D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF20522C633050002F2D3 /* API.swift */,
+				D14BF20722C633140002F2D3 /* ServiceManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D14BF1E822C61C650002F2D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF20222C626CB0002F2D3 /* Store+CoreDataClass.swift */,
+				D14BF20122C626CB0002F2D3 /* Store+CoreDataProperties.swift */,
+				D14BF1E922C61C650002F2D3 /* DoorDashLab.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D14BF1ED22C61E020002F2D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D14BF1EE22C61E210002F2D3 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF1F522C61F780002F2D3 /* FavoritesViewController.swift */,
+				D14BF1F722C61F860002F2D3 /* FavoritesViewController.storyboard */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		D14BF1EF22C61E660002F2D3 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF1F322C61F570002F2D3 /* ExploreViewController.swift */,
+				D14BF1F922C61F990002F2D3 /* ExploreViewController.storyboard */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		D14BF1F022C61EBF0002F2D3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF20C22C63EB20002F2D3 /* URLImage.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D14BF20922C634D40002F2D3 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF20A22C634EC0002F2D3 /* JsonUtility.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		E73C035B07360740BDCB8D8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66E01089416459CB9B0480C3 /* Pods_DoorDashLab.framework */,
+				40A0D5BEB3505FD50FCF1A84 /* libPods-DoorDashLabTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D14BF1DC22C61AC10002F2D3 /* Build configuration list for PBXNativeTarget "DoorDashLab" */;
 			buildPhases = (
+				02FE9EB77B98A9B5C67E9E36 /* [CP] Check Pods Manifest.lock */,
 				D14BF1B622C61ABF0002F2D3 /* Sources */,
 				D14BF1B722C61ABF0002F2D3 /* Frameworks */,
 				D14BF1B822C61ABF0002F2D3 /* Resources */,
+				C3498CBB263D66B0150CDC41 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D14BF1DF22C61AC10002F2D3 /* Build configuration list for PBXNativeTarget "DoorDashLabTests" */;
 			buildPhases = (
+				B34D5DBDFDF681C698D14390 /* [CP] Check Pods Manifest.lock */,
 				D14BF1CF22C61AC10002F2D3 /* Sources */,
 				D14BF1D022C61AC10002F2D3 /* Frameworks */,
 				D14BF1D122C61AC10002F2D3 /* Resources */,
@@ -185,7 +338,10 @@
 			files = (
 				D14BF1CD22C61AC10002F2D3 /* LaunchScreen.storyboard in Resources */,
 				D14BF1CA22C61AC10002F2D3 /* Assets.xcassets in Resources */,
+				D14BF1FC22C6210E0002F2D3 /* ExploreMapViewController.storyboard in Resources */,
 				D14BF1C822C61ABF0002F2D3 /* Main.storyboard in Resources */,
+				D14BF1FA22C61F990002F2D3 /* ExploreViewController.storyboard in Resources */,
+				D14BF1F822C61F860002F2D3 /* FavoritesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,15 +354,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02FE9EB77B98A9B5C67E9E36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoorDashLab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B34D5DBDFDF681C698D14390 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoorDashLabTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3498CBB263D66B0150CDC41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DoorDashLab/Pods-DoorDashLab-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoorDashLab/Pods-DoorDashLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D14BF1B622C61ABF0002F2D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14BF1BE22C61ABF0002F2D3 /* AppDelegate.swift in Sources */,
-				D14BF1C122C61ABF0002F2D3 /* DoorDashLab.xcdatamodeld in Sources */,
-				D14BF1C322C61ABF0002F2D3 /* MasterViewController.swift in Sources */,
-				D14BF1C522C61ABF0002F2D3 /* DetailViewController.swift in Sources */,
+				D14BF1F622C61F780002F2D3 /* FavoritesViewController.swift in Sources */,
+				D14BF20322C626CB0002F2D3 /* Store+CoreDataProperties.swift in Sources */,
+				D14BF1EC22C61C650002F2D3 /* DoorDashLab.xcdatamodeld in Sources */,
+				D14BF1F222C61F010002F2D3 /* ExploreMapViewController.swift in Sources */,
+				D14BF1EB22C61C650002F2D3 /* AppDelegate.swift in Sources */,
+				D14BF20822C633140002F2D3 /* ServiceManager.swift in Sources */,
+				D14BF20B22C634EC0002F2D3 /* JsonUtility.swift in Sources */,
+				D14BF20422C626CB0002F2D3 /* Store+CoreDataClass.swift in Sources */,
+				D14BF20622C633050002F2D3 /* API.swift in Sources */,
+				D14BF1F422C61F570002F2D3 /* ExploreViewController.swift in Sources */,
+				D14BF20D22C63EB20002F2D3 /* URLImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +588,7 @@
 		};
 		D14BF1DD22C61AC10002F2D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3807FA62E6535D778C56BD98 /* Pods-DoorDashLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +607,7 @@
 		};
 		D14BF1DE22C61AC10002F2D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A96788C1C692F9192739AE /* Pods-DoorDashLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +626,7 @@
 		};
 		D14BF1E022C61AC10002F2D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 991622A10C030EDA3379F8BD /* Pods-DoorDashLabTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -423,6 +648,7 @@
 		};
 		D14BF1E122C61AC10002F2D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4358C21766454639BF737593 /* Pods-DoorDashLabTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,12 +701,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D14BF1BF22C61ABF0002F2D3 /* DoorDashLab.xcdatamodeld */ = {
+		D14BF1E922C61C650002F2D3 /* DoorDashLab.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D14BF1C022C61ABF0002F2D3 /* DoorDashLab.xcdatamodel */,
+				D14BF1EA22C61C650002F2D3 /* DoorDashLab.xcdatamodel */,
 			);
-			currentVersion = D14BF1C022C61ABF0002F2D3 /* DoorDashLab.xcdatamodel */;
+			currentVersion = D14BF1EA22C61C650002F2D3 /* DoorDashLab.xcdatamodel */;
 			path = DoorDashLab.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
