@@ -13,7 +13,8 @@ typealias URLImageCompletion = (UIImage?, URLResponse?, Error?) -> Void
 
 /// Fetches a UIImage from a URL asynchronously, calling the completion handler upon success or failure.
 public struct URLImage {
-
+    static let cache = NSCache<NSString, UIImage>()
+    
     /// Fetches a UIImage from a URL asynchronously, calling the completion handler upon success or failure.
     ///
     /// - parameter url: The URL of an image to fetch
@@ -21,6 +22,10 @@ public struct URLImage {
     ///             image, urlResponse, or error
     ///             when the call finishes or an error occurs
     static func fetchImageURL(_ url: URL, completion: @escaping URLImageCompletion) {
+        if let cachedImage = cache.object(forKey: url.absoluteString as NSString) {
+            completion(cachedImage, nil, nil)
+            return
+        }
         let requestSession = URLSession.shared
         let request = URLRequest(url: url)
         
@@ -28,6 +33,9 @@ public struct URLImage {
             var imageFromURL: UIImage?
             if let data = data {
                 imageFromURL = UIImage(data: data)
+                if let cachedImage = imageFromURL {
+                    cache.setObject(cachedImage, forKey: url.absoluteString as NSString)
+                }
             }
 
             DispatchQueue.main.async {
