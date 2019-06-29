@@ -12,10 +12,12 @@ import Contacts
 
 class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var selectedAddressLabel: UILabel!
     let spotService = SpotLocatoinService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = NSLocalizedString("Choose an Address", comment: "Choose an Address")
         spotService.spot { [weak self] location in
             let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             let region = MKCoordinateRegion(center: location, span: span)
@@ -50,6 +52,7 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             pin.animatesDrop = true
             pin.isDraggable = true
             pin.loadCustomLines(customLines: placemark.addressLines ?? [])
+            selectedAddressLabel.text = placemark.flatAddress
             return pin
         }
     }
@@ -67,7 +70,9 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             view.transform = CGAffineTransform.identity
             view.dragState = .none
             guard let placemark = view.annotation as? WrappedPlacemark else {return }
-            placemark.refreshPin(view)
+            placemark.refreshPin(view) { [weak self] placemark in
+                self?.selectedAddressLabel.text = placemark?.flatAddress
+            }
         default:
             return
         }

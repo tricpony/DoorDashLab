@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import Contacts
 
+typealias RefreshCompletion = (WrappedPlacemark?) -> Void
+
 class WrappedPlacemark: NSObject, MKAnnotation {
     private var coord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     private var placemark: CLPlacemark? = nil
@@ -45,14 +47,20 @@ class WrappedPlacemark: NSObject, MKAnnotation {
         return lines
     }
     
+    var flatAddress: String? {
+        guard let addr = placemark?.postalAddress else { return nil }
+        return String(format: "%@, %@, %@, %@", addr.street, addr.city, addr.state, addr.postalCode)
+    }
+
     /// Update the annotation after drag
     /// - Parameters:
     ///   - view: Annotation view that needs to be refreshed
-    func refreshPin(_ view: MKAnnotationView) {
+    func refreshPin(_ view: MKAnnotationView, completion: @escaping RefreshCompletion) {
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(CLLocation(latitude: coord.latitude, longitude: coord.longitude)) { [weak self] (placemarks, error) in
             self?.placemark = placemarks?.last
             view.loadCustomLines(customLines: self?.addressLines ?? [])
+            completion(self)
         }
     }
 }
