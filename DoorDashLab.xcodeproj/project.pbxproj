@@ -29,7 +29,7 @@
 		D14BF20D22C63EB20002F2D3 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20C22C63EB20002F2D3 /* URLImage.swift */; };
 		D14BF20F22C6C8D10002F2D3 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF20E22C6C8D10002F2D3 /* SplitViewController.swift */; };
 		D14BF21422C774070002F2D3 /* SpotLocatoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21322C774070002F2D3 /* SpotLocatoinService.swift */; };
-		D14BF21622C7751D0002F2D3 /* PrettyPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21522C7751D0002F2D3 /* PrettyPlacemark.swift */; };
+		D14BF21622C7751D0002F2D3 /* WrappedPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21522C7751D0002F2D3 /* WrappedPlacemark.swift */; };
 		D14BF21822C77AC50002F2D3 /* MKAnnotationView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21722C77AC50002F2D3 /* MKAnnotationView+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,7 @@
 		D14BF20C22C63EB20002F2D3 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		D14BF20E22C6C8D10002F2D3 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		D14BF21322C774070002F2D3 /* SpotLocatoinService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotLocatoinService.swift; sourceTree = "<group>"; };
-		D14BF21522C7751D0002F2D3 /* PrettyPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyPlacemark.swift; sourceTree = "<group>"; };
+		D14BF21522C7751D0002F2D3 /* WrappedPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedPlacemark.swift; sourceTree = "<group>"; };
 		D14BF21722C77AC50002F2D3 /* MKAnnotationView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotationView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				D14BF21322C774070002F2D3 /* SpotLocatoinService.swift */,
-				D14BF21522C7751D0002F2D3 /* PrettyPlacemark.swift */,
+				D14BF21522C7751D0002F2D3 /* WrappedPlacemark.swift */,
 			);
 			path = MapUtility;
 			sourceTree = "<group>";
@@ -438,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14BF21622C7751D0002F2D3 /* PrettyPlacemark.swift in Sources */,
+				D14BF21622C7751D0002F2D3 /* WrappedPlacemark.swift in Sources */,
 				D14BF1F622C61F780002F2D3 /* FavoritesViewController.swift in Sources */,
 				D14BF20322C626CB0002F2D3 /* Store+CoreDataProperties.swift in Sources */,
 				D14BF1EC22C61C650002F2D3 /* DoorDashLab.xcdatamodeld in Sources */,

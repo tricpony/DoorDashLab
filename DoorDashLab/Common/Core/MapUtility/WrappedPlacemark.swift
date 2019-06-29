@@ -10,9 +10,10 @@ import UIKit
 import MapKit
 import Contacts
 
-class PrettyPlacemark: MKPlacemark {
+class WrappedPlacemark: NSObject, MKAnnotation {
     private var coord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-    override var coordinate: CLLocationCoordinate2D {
+    private var placemark: CLPlacemark? = nil
+    var coordinate: CLLocationCoordinate2D {
         get {
             return coord
         }
@@ -22,27 +23,32 @@ class PrettyPlacemark: MKPlacemark {
     }
 
     init(coordinate: CLLocationCoordinate2D, placemark: CLPlacemark) {
-        super.init(placemark: placemark)
+        super.init()
+        self.placemark = placemark
         self.coordinate = coordinate
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override var title: String? {
+    var title: String? {
         return "Delivering To:"
     }
     
     var addressLines: [String]? {
-        guard let addr = postalAddress else { return nil }
+        guard let addr = placemark?.postalAddress else { return nil }
         let blankLine = ""
         var lines = [addr.street, String(format: "%@ %@, %@", addr.city, addr.state, addr.postalCode)]
-        if let name = name, name != addr.street {
+        if let name = placemark?.name, name != addr.street {
             lines.insert(contentsOf: [blankLine, name], at: 0)
         } else {
             lines.insert(blankLine, at: 0)
         }
         return lines
+    }
+    
+    func refreshPin(_ view: MKAnnotationView) {
+        let geoCoder = CLGeocoder()
+        geoCoder.reverseGeocodeLocation(CLLocation(latitude: coord.latitude, longitude: coord.longitude)) { [weak self] (placemarks, error) in
+            self?.placemark = placemarks?.last
+            view.loadCustomLines(customLines: self?.addressLines ?? [])
+        }
     }
 }
