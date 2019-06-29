@@ -20,6 +20,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wuG-iw-t3n">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <outlet property="delegate" destination="owY-hW-ll3" id="jXM-vy-wda"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,6 +35,9 @@
                         <viewLayoutGuide key="safeArea" id="pBJ-va-cDT"/>
                     </view>
                     <navigationItem key="navigationItem" id="qtd-MK-IfQ"/>
+                    <connections>
+                        <outlet property="mapView" destination="wuG-iw-t3n" id="oEh-Bt-IcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUd-6G-tXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

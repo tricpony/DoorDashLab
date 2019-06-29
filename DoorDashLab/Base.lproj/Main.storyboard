@@ -12,7 +12,7 @@
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
             <objects>
-                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
+                <splitViewController id="H1p-Uh-vWS" customClass="SplitViewController" customModule="DoorDashLab" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <connections>
                         <segue destination="Y2H-hD-nTs" kind="relationship" relationship="masterViewController" id="fQn-ca-mfn"/>
@@ -26,7 +26,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="VkX-Wl-4GK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BqO-67-lYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="GSJ-xm-rr3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sgm-QC-WTM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -38,6 +37,7 @@
                         <segue destination="YOz-Nq-DuB" kind="relationship" relationship="viewControllers" id="b8e-Gb-OPL"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqO-67-lYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="59" y="-232"/>
         </scene>
