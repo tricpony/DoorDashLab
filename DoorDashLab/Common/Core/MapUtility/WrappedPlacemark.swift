@@ -47,6 +47,7 @@ class WrappedPlacemark: NSObject, MKAnnotation {
         return lines
     }
     
+    /// Provide address on one line
     var flatAddress: String? {
         guard let addr = placemark?.postalAddress else { return nil }
         return String(format: "%@, %@, %@, %@", addr.street, addr.city, addr.state, addr.postalCode)
