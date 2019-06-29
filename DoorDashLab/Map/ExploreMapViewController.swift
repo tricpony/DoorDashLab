@@ -16,10 +16,6 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         spotService.spot { [weak self] location in
             let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             let region = MKCoordinateRegion(center: location, span: span)
@@ -29,6 +25,9 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
         }
     }
 
+    /// Pins the map at the user's current location
+    /// - Parameters:
+    ///   - at: Latitude & longitude location of user
     func pinMap(at: CLLocationCoordinate2D) {
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(CLLocation(latitude: at.latitude, longitude: at.longitude)) { [weak self] (placemarks, error) in
@@ -62,7 +61,10 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
         switch newState {
         case .starting:
             view.dragState = .dragging
+            // move pin out from under finger
+            view.transform = view.transform.translatedBy(x: 0, y: -15)
         case .ending, .canceling:
+            view.transform = CGAffineTransform.identity
             view.dragState = .none
             guard let placemark = view.annotation as? WrappedPlacemark else {return }
             placemark.refreshPin(view)
@@ -70,10 +72,4 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             return
         }
     }
-
-
-//    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-//        guard let pin = views.first else { return }
-//        pin.setSelected(true, animated: true)
-//    }
 }

@@ -32,6 +32,7 @@ class WrappedPlacemark: NSObject, MKAnnotation {
         return "Delivering To:"
     }
     
+    /// Provide components of an address in an array
     var addressLines: [String]? {
         guard let addr = placemark?.postalAddress else { return nil }
         let blankLine = ""
@@ -44,6 +45,9 @@ class WrappedPlacemark: NSObject, MKAnnotation {
         return lines
     }
     
+    /// Update the annotation after drag
+    /// - Parameters:
+    ///   - view: Annotation view that needs to be refreshed
     func refreshPin(_ view: MKAnnotationView) {
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(CLLocation(latitude: coord.latitude, longitude: coord.longitude)) { [weak self] (placemarks, error) in

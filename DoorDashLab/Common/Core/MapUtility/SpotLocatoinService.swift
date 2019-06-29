@@ -44,7 +44,7 @@ class SpotLocatoinService: NSObject, CLLocationManagerDelegate {
     }
 
     private func enableLocationServices() {
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
     }
 
