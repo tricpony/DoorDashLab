@@ -12,7 +12,7 @@
         <!--Favorites View Controller-->
         <scene sceneID="N4F-XC-mHS">
             <objects>
-                <tableViewController id="Ld7-7t-28h" customClass="FavoritesViewController" customModule="DoorDashLab" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FavoritesScene" id="Ld7-7t-28h" customClass="FavoritesViewController" customModule="DoorDashLab" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bo4-iS-1dx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

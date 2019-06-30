@@ -22,6 +22,9 @@ class FavoritesViewController: UITableViewController, SizeClass {
     private var stores: [Store] {
         return Store.mr_find(byAttribute: "favorite", withValue: true) as! [Store]
     }
+    var hasStores: Bool { // strictly for unit testing
+        return stores.isEmpty == false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
