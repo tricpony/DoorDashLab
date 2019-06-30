@@ -11,6 +11,7 @@ import MapKit
 import CoreData
 import MagicalRecord
 
+/// Class to display results of store search API service
 class ExploreViewController: UITableViewController, SizeClass {
     lazy var managedObjectContext: NSManagedObjectContext = {
         MagicalRecord.setupCoreDataStack(withStoreNamed:"DoorDashLab")
@@ -40,6 +41,7 @@ class ExploreViewController: UITableViewController, SizeClass {
         performStoreService()
     }
 
+    /// Invoke store search API service
     func performStoreService() {
         guard let coordinate = coordinate else { return }
         ServiceManager().startStoreSearchService(lat: coordinate.latitude, lng: coordinate.longitude) { [weak self] data, error in

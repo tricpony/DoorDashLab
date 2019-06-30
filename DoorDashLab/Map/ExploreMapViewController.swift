@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import Contacts
 
+/// Class to display a map with a draggable pin defaulting to the current location of device
 class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigationBarAppearance {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var selectedAddressLabel: UILabel!

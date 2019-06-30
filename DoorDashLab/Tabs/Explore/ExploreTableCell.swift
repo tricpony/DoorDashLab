@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Custom table cell class to display each store
 class ExploreTableCell: UITableViewCell {
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeSummaryLabel: UILabel!
@@ -22,6 +23,10 @@ class ExploreTableCell: UITableViewCell {
         deliveryFeeLabel.textColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
     }
 
+    /// Fill out cell content
+    /// - Parameters:
+    ///   - store: model object containing store details
+    ///   - currencyFormatter: formatter used on delivery fee
     func fillCell(_ store: Store, _ currencyFormatter: Formatter) {
         storeNameLabel.text = store.formattedName
         storeSummaryLabel.text = store.summary

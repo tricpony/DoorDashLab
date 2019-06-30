@@ -9,7 +9,14 @@
 import Foundation
 import Alamofire
 
+/// Struct to centralize service calls
 struct ServiceManager {
+
+    /// Invokes store search API service
+    /// - Parameters:
+    ///   - lat: latitude value
+    ///   - lng: longiture value
+    ///   - completion: call back closure returning either service success with payload or failure
     func startStoreSearchService(lat: Double, lng: Double, completion:@escaping (Data?, Error?)->()) {
         guard let url = URL(string: API_Method.store_search.serviceAddress()) else { return }
         Alamofire.request(url,

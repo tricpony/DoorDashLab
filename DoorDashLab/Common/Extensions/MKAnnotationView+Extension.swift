@@ -10,6 +10,10 @@ import Foundation
 import MapKit
 
 extension MKAnnotationView {
+    
+    /// Add left justified vertically stacked labels
+    /// - Parameters:
+    ///   - customLines: array of strings to fill each label
     func loadCustomLines(customLines: [String]) {
         let stackView = self.stackView()
         for line in customLines {

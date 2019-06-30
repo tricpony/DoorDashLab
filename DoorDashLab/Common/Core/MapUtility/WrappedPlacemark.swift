@@ -12,6 +12,7 @@ import Contacts
 
 typealias RefreshCompletion = (WrappedPlacemark?) -> Void
 
+/// Custom map annotation class that can be updated as the pin is dragged
 class WrappedPlacemark: NSObject, MKAnnotation {
     private var coord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     private var placemark: CLPlacemark? = nil

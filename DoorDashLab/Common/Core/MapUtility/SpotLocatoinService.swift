@@ -11,6 +11,7 @@ import MapKit
 
 typealias SpotCompletion = (CLLocationCoordinate2D) -> Void
 
+/// Convenience class to neatly enclose location service
 class SpotLocatoinService: NSObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     var completion: SpotCompletion? = nil
@@ -22,11 +23,13 @@ class SpotLocatoinService: NSObject, CLLocationManagerDelegate {
         determineAccess()
     }
     
+    /// Stop updating location service
     func suspend() {
         isSuspended = true
         locationManager.stopUpdatingLocation()
     }
-    
+
+    /// Start updating location service
     func resume() {
         locationManager.startUpdatingLocation()
         isSuspended = false

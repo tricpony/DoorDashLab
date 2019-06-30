@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import MagicalRecord
 
+/// Class to display all stores fetched so far
 class FavoritesViewController: UITableViewController, SizeClass {
     lazy var currencyFormatter: Formatter = {
         let currencyFormatter = NumberFormatter()

@@ -9,18 +9,21 @@
 import Foundation
 import UIKit
 
+/// Enum representing the tapped button of an alert panel
 public enum SelectedButton: Int {
     case buttonOne
     case buttonTwo
-    case buttonThree
-    case buttonFour
-    case buttonFive
-    case buttonSix
-    case cancelButton
     public typealias AlertHandler = (SelectedButton) -> Void
 }
 
 extension UIViewController {
+
+    /// Convenience method to present alert panels
+    /// - Parameters:
+    ///   - title: title of panel
+    ///   - message: message of panel
+    ///   - buttonTitles: array of titles to display as buttons in panel
+    ///   - completion: call back closure triggered when a button is tapped
     func presentAlert(title: String?, message: String?, buttonTitles: [String], completion: SelectedButton.AlertHandler?) {
         guard buttonTitles.count > 0 else { return }
         let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -37,6 +40,11 @@ extension UIViewController {
         self.present(actionSheetController, animated: true, completion: nil)
     }
     
+    /// Convenience method to present an OK alert panel
+    /// - Parameters:
+    ///   - title: title of panel
+    ///   - message: message of panel
+    ///   - completion: call back closure triggered when a button is tapped
     func presentOkAlert(title: String, message: String, completion: SelectedButton.AlertHandler?) {
         presentAlert(title: title, message: message, buttonTitles: [NSLocalizedString("OK", comment: "OK")], completion: completion)
     }

@@ -11,6 +11,7 @@ import Foundation
 enum API_Method: String {
     case store_search
 
+    /// Provide service address of case
     func serviceAddress() -> String {
         return API.endPoint + self.rawValue + "/"
     }
@@ -18,5 +19,4 @@ enum API_Method: String {
 
 struct API {
     static let endPoint = "https://api.doordash.com/v1/"
-
 }
