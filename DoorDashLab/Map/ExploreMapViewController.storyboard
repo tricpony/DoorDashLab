@@ -13,7 +13,7 @@
         <!--Explore Map View Controller-->
         <scene sceneID="P2m-U5-UcC">
             <objects>
-                <viewController id="owY-hW-ll3" customClass="ExploreMapViewController" customModule="DoorDashLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExploreMapScene" id="owY-hW-ll3" customClass="ExploreMapViewController" customModule="DoorDashLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Llq-rU-jlC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

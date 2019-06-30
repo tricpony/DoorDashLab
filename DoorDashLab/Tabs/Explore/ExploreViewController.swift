@@ -26,7 +26,10 @@ class ExploreViewController: UITableViewController, SizeClass {
     }()
     private var stores = [Store]()
     var coordinate: CLLocationCoordinate2D? = nil
-    
+    var hasStores: Bool { // strictly for unit testing
+        return stores.isEmpty == false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //this will prevent bogus separator lines from displaying in an empty table
