@@ -29,7 +29,7 @@ class ExploreViewController: UITableViewController, SizeClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         //this will prevent bogus separator lines from displaying in an empty table
-        self.tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView()
         //enable auto cell height that uses constraints
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 45
