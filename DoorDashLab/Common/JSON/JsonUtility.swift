@@ -17,7 +17,7 @@ struct JsonUtility<T: Decodable> {
     /// - Parameters:
     ///   - payload: JSON data
     ///   - ctx: core data context that is passed to the init of the generic type
-    /// - Returns: An array of generic type objects, or nil
+    /// - Returns: An array of generic type, T, objects, or nil
     static func parseJSON(_ payload: Data?, ctx: NSManagedObjectContext? = nil) -> [T]? {
         if payload == nil {
             return nil
