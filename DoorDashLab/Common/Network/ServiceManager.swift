@@ -9,18 +9,20 @@
 import Foundation
 import Alamofire
 
-func startStoreSearchService(method: API_Method, lat: Double, lng: Double, completion:@escaping (Data?, Error?)->()) {
-    guard let url = URL(string: method.serviceAddress()) else { return }
-    Alamofire.request(url,
-                      method: .get,
-                      parameters: ["lat": lat, "lng": lng])
-        .validate()
-        .responseData { response in
-            guard response.result.isSuccess else {
-                print("Service Failed: \(String(describing: response.result.error))")
-                completion(nil, response.result.error)
-                return
-            }
-            completion(response.result.value, nil)
+struct ServiceManager {
+    func startStoreSearchService(lat: Double, lng: Double, completion:@escaping (Data?, Error?)->()) {
+        guard let url = URL(string: API_Method.store_search.serviceAddress()) else { return }
+        Alamofire.request(url,
+                          method: .get,
+                          parameters: ["lat": lat, "lng": lng])
+            .validate()
+            .responseData { response in
+                guard response.result.isSuccess else {
+                    print("Service Failed: \(String(describing: response.result.error))")
+                    completion(nil, response.result.error)
+                    return
+                }
+                completion(response.result.value, nil)
+        }
     }
 }

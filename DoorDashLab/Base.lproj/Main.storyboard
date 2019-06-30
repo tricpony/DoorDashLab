@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Split View Controller-->
@@ -16,50 +15,12 @@
                     <toolbarItems/>
                     <connections>
                         <segue destination="Y2H-hD-nTs" kind="relationship" relationship="masterViewController" id="fQn-ca-mfn"/>
-                        <segue destination="GSJ-xm-rr3" kind="relationship" relationship="detailViewController" id="gAd-SG-8zG"/>
+                        <segue destination="6BU-2G-sm0" kind="relationship" relationship="detailViewController" id="mpL-jH-lfG"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="VkX-Wl-4GK">
-            <objects>
-                <tabBarController id="GSJ-xm-rr3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sgm-QC-WTM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="WdC-Tp-WZp" kind="relationship" relationship="viewControllers" id="mms-s0-oLl"/>
-                        <segue destination="YOz-Nq-DuB" kind="relationship" relationship="viewControllers" id="b8e-Gb-OPL"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BqO-67-lYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="59" y="-232"/>
-        </scene>
-        <!--FavoritesViewController-->
-        <scene sceneID="EkV-O3-YTh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FavoritesViewController" id="YOz-Nq-DuB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ebv-6o-Udy"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eaa-Vh-hhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="704" y="-141"/>
-        </scene>
-        <!--ExploreViewController-->
-        <scene sceneID="3Vr-79-LVF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ExploreViewController" id="WdC-Tp-WZp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4ZK-q3-2eY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="01p-JR-9fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="676" y="-380"/>
         </scene>
         <!--ExploreMapViewController-->
         <scene sceneID="0wF-bL-lcz">
@@ -68,6 +29,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8P-Eo-UaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-102" y="-605"/>
+        </scene>
+        <!--Tabs-->
+        <scene sceneID="kGl-0h-S0Y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tabs" id="6BU-2G-sm0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywV-7X-xjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-102" y="-202"/>
         </scene>
     </scenes>
 </document>

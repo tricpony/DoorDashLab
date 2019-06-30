@@ -52,11 +52,15 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="MX5-mx-z6M" firstAttribute="centerX" secondItem="HYj-Jf-6bq" secondAttribute="centerX" id="05J-3W-w6k"/>
                                     <constraint firstItem="MX5-mx-z6M" firstAttribute="centerY" secondItem="HYj-Jf-6bq" secondAttribute="centerY" id="PRe-sh-YX3"/>
                                     <constraint firstAttribute="height" constant="61" id="pGg-1P-VK9"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xz0-i2-Ojv" appends="YES" id="n6V-jh-soG"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,8 +85,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUd-6G-tXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xz0-i2-Ojv">
+                    <connections>
+                        <segue destination="DHf-9c-15P" kind="showDetail" identifier="detailSegue" id="bpg-mb-lkD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1214.4927536231885" y="-230.35714285714283"/>
+        </scene>
+        <!--Tabs-->
+        <scene sceneID="yPD-0W-uSc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tabs" id="DHf-9c-15P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vi-a2-Zyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1856" y="-167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HfT-GV-7OB">

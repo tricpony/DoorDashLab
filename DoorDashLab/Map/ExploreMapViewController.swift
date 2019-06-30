@@ -14,7 +14,8 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var selectedAddressLabel: UILabel!
     let spotService = SpotLocatoinService()
-    
+    var coordinate: CLLocationCoordinate2D? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Choose an Address", comment: "Choose an Address")
@@ -24,6 +25,7 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             self?.mapView.setRegion(region, animated: true)
             self?.spotService.suspend()
             self?.pinMap(at: location)
+            self?.coordinate = location
         }
     }
 
@@ -77,4 +79,19 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             return
         }
     }
+    
+    // MARK: - Storyboard
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            guard let tabVC = segue.destination as? UITabBarController else { return }
+            guard let viewControllers = tabVC.viewControllers else { return }
+            guard let navVC = viewControllers.first as? UINavigationController else { return }
+            guard let vc = navVC.topViewController as? ExploreViewController else { return }
+            vc.coordinate = coordinate
+                //this clears the title of the back button to leave only the chevron
+//                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
+    }
+
 }

@@ -32,6 +32,9 @@
 		D14BF21622C7751D0002F2D3 /* WrappedPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21522C7751D0002F2D3 /* WrappedPlacemark.swift */; };
 		D14BF21822C77AC50002F2D3 /* MKAnnotationView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21722C77AC50002F2D3 /* MKAnnotationView+Extension.swift */; };
 		D14BF21A22C80E870002F2D3 /* ExploreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21922C80E870002F2D3 /* ExploreTableCell.swift */; };
+		D14BF21C22C816E20002F2D3 /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14BF21B22C816E20002F2D3 /* Tabs.storyboard */; };
+		D14BF21E22C81D9A0002F2D3 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21D22C81D9A0002F2D3 /* UIViewController+Alerts.swift */; };
+		D14BF22122C823A00002F2D3 /* SizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22022C823A00002F2D3 /* SizeClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		D14BF21522C7751D0002F2D3 /* WrappedPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedPlacemark.swift; sourceTree = "<group>"; };
 		D14BF21722C77AC50002F2D3 /* MKAnnotationView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotationView+Extension.swift"; sourceTree = "<group>"; };
 		D14BF21922C80E870002F2D3 /* ExploreTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableCell.swift; sourceTree = "<group>"; };
+		D14BF21B22C816E20002F2D3 /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
+		D14BF21D22C81D9A0002F2D3 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		D14BF22022C823A00002F2D3 /* SizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 		D14BF1E322C61C650002F2D3 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				D14BF21B22C816E20002F2D3 /* Tabs.storyboard */,
 				D14BF1EF22C61E660002F2D3 /* Explore */,
 				D14BF1EE22C61E210002F2D3 /* Favorites */,
 			);
@@ -185,10 +192,11 @@
 		D14BF1E622C61C650002F2D3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D14BF20922C634D40002F2D3 /* JSON */,
 				D14BF1F022C61EBF0002F2D3 /* Core */,
 				D14BF1ED22C61E020002F2D3 /* Extensions */,
+				D14BF20922C634D40002F2D3 /* JSON */,
 				D14BF1E722C61C650002F2D3 /* Network */,
+				D14BF21F22C823650002F2D3 /* Protocols */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				D14BF21722C77AC50002F2D3 /* MKAnnotationView+Extension.swift */,
+				D14BF21D22C81D9A0002F2D3 /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +273,14 @@
 				D14BF21522C7751D0002F2D3 /* WrappedPlacemark.swift */,
 			);
 			path = MapUtility;
+			sourceTree = "<group>";
+		};
+		D14BF21F22C823650002F2D3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF22022C823A00002F2D3 /* SizeClass.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E73C035B07360740BDCB8D8F /* Frameworks */ = {
@@ -361,6 +378,7 @@
 			files = (
 				D14BF1CD22C61AC10002F2D3 /* LaunchScreen.storyboard in Resources */,
 				D14BF1CA22C61AC10002F2D3 /* Assets.xcassets in Resources */,
+				D14BF21C22C816E20002F2D3 /* Tabs.storyboard in Resources */,
 				D14BF1FC22C6210E0002F2D3 /* ExploreMapViewController.storyboard in Resources */,
 				D14BF1C822C61ABF0002F2D3 /* Main.storyboard in Resources */,
 				D14BF1FA22C61F990002F2D3 /* ExploreViewController.storyboard in Resources */,
@@ -442,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14BF21622C7751D0002F2D3 /* WrappedPlacemark.swift in Sources */,
+				D14BF22122C823A00002F2D3 /* SizeClass.swift in Sources */,
 				D14BF1F622C61F780002F2D3 /* FavoritesViewController.swift in Sources */,
 				D14BF20322C626CB0002F2D3 /* Store+CoreDataProperties.swift in Sources */,
 				D14BF1EC22C61C650002F2D3 /* DoorDashLab.xcdatamodeld in Sources */,
@@ -454,6 +473,7 @@
 				D14BF20422C626CB0002F2D3 /* Store+CoreDataClass.swift in Sources */,
 				D14BF20622C633050002F2D3 /* API.swift in Sources */,
 				D14BF21822C77AC50002F2D3 /* MKAnnotationView+Extension.swift in Sources */,
+				D14BF21E22C81D9A0002F2D3 /* UIViewController+Alerts.swift in Sources */,
 				D14BF1F422C61F570002F2D3 /* ExploreViewController.swift in Sources */,
 				D14BF20D22C63EB20002F2D3 /* URLImage.swift in Sources */,
 				D14BF20F22C6C8D10002F2D3 /* SplitViewController.swift in Sources */,

@@ -18,7 +18,7 @@ extension Store {
     }
 
     @NSManaged public var createDate: NSDate?
-    @NSManaged public var id: String?
+    @NSManaged public var id: Int32
     @NSManaged public var name: String?
     @NSManaged public var summary: String?
     @NSManaged public var deliveryFee: Int16
