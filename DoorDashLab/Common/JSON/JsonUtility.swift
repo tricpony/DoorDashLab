@@ -9,8 +9,15 @@
 import Foundation
 import CoreData
 
+/// Generic struct for parsing json
+/// The generic type should be a decodable type that the parser will create and fill
 struct JsonUtility<T: Decodable> {
 
+    /// Parse the payload
+    /// - Parameters:
+    ///   - payload: JSON data
+    ///   - ctx: core data context that is passed to the init of the generic type
+    /// - Returns: An array of generic type objects, or nil
     static func parseJSON(_ payload: Data?, ctx: NSManagedObjectContext? = nil) -> [T]? {
         if payload == nil {
             return nil
