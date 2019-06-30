@@ -30,6 +30,9 @@ class ExploreViewController: UITableViewController, SizeClass {
         super.viewDidLoad()
         //this will prevent bogus separator lines from displaying in an empty table
         self.tableView.tableFooterView = UIView()
+        //enable auto cell height that uses constraints
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 45
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,24 +87,4 @@ class ExploreViewController: UITableViewController, SizeClass {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
-    // MARK: - Storyboard
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "blockDetailSegue" {
-//            if let indexPath = sender as? IndexPath {
-//                let block: Block = fetchedResultsController().object(at: indexPath)
-//                let vc = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-//                vc.block = block
-//                vc.navigationItem.title = block.producer
-//                vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//                vc.navigationItem.leftItemsSupplementBackButton = true
-//
-//                //this clears the title of the back button to leave only the chevron
-//                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//            }
-//        }
-//    }
-    
 }
