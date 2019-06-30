@@ -32,14 +32,21 @@ public class Store: NSManagedObject, Decodable {
                 fatalError("Failed to decode Store")
         }
 
+        var optionalSmallInt: Int16?
+        var optionalLargeInt: Int32?
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.init(entity: entity, insertInto: ctx)
-        self.id = try container.decode(Int32.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.summary = try container.decode(String.self, forKey: .summary)
-        self.deliveryFee = try container.decode(Int16.self, forKey: .deliveryFee)
         self.coverImageURL = try container.decode(String.self, forKey: .coverImageURL)
-        self.deliveryTime = try container.decode(Int16.self, forKey: .deliveryTime)
+        
+        // handle possible optionsals that can not be declared optional in the model
+        optionalSmallInt = try? container.decode(Int16.self, forKey: .deliveryTime)
+        self.deliveryTime = optionalSmallInt ?? 0
+        optionalLargeInt = try? container.decode(Int32.self, forKey: .id)
+        self.id = optionalLargeInt ?? 0
+        optionalSmallInt = try? container.decode(Int16.self, forKey: .deliveryFee)
+        self.deliveryFee = optionalSmallInt ?? 0
     }
 }
 

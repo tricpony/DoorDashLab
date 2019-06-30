@@ -47,6 +47,12 @@ class ExploreViewController: UITableViewController, SizeClass {
                 guard let fetchedStores = JsonUtility<Store>.parseJSON(data, ctx: self?.managedObjectContext) else { return }
                 self?.stores = fetchedStores
                 self?.tableView.reloadData()
+                self?.managedObjectContext.mr_saveToPersistentStore(completion: nil)
+            } else {
+                let message = NSLocalizedString("There was a problem with your request.  Please try again later.", comment: "Service error alert")
+                self?.presentOkAlert(title: NSLocalizedString("Alert", comment: "Alert"),
+                               message: message,
+                               completion: nil)
             }
         }
     }

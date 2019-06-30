@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import Contacts
 
-class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, DDNavigationBarAppearance {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var selectedAddressLabel: UILabel!
     let spotService = SpotLocatoinService()
@@ -18,7 +18,8 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("Choose an Address", comment: "Choose an Address")
+        loadNavItems()
+        title = NSLocalizedString("Choose an Address", comment: "Choose an Address")
         spotService.spot { [weak self] location in
             let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             let region = MKCoordinateRegion(center: location, span: span)
@@ -89,7 +90,6 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             guard let navVC = viewControllers.first as? UINavigationController else { return }
             guard let vc = navVC.topViewController as? ExploreViewController else { return }
             vc.coordinate = coordinate
-            navigationItem.backBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "nav-address"), style: .plain, target: nil, action: nil)
         }
     }
 
