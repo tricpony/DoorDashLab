@@ -73,6 +73,7 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             view.transform = CGAffineTransform.identity
             view.dragState = .none
             guard let placemark = view.annotation as? WrappedPlacemark else {return }
+            coordinate = placemark.coordinate
             placemark.refreshPin(view) { [weak self] placemark in
                 self?.selectedAddressLabel.text = placemark?.flatAddress
             }

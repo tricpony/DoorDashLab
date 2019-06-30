@@ -7,24 +7,64 @@
 //
 
 import UIKit
+import CoreData
+import MagicalRecord
 
-class FavoritesViewController: UITableViewController {
+class FavoritesViewController: UITableViewController, SizeClass {
+    lazy var currencyFormatter: Formatter = {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = NSLocale.current
+        return currencyFormatter
+    }()
+    private var stores: [Store] {
+        return Store.mr_find(byAttribute: "favorite", withValue: true) as! [Store]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //this will prevent bogus separator lines from displaying in an empty table
+        tableView.tableFooterView = UIView()
+        //enable auto cell height that uses constraints
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
+    }
 
-        // Do any additional setup after loading the view.
+    // MARK: - Table View
+    
+    func cellIdentifier(at indexPath: IndexPath) -> String {
+        return "ExploreTableCell"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func nextCellForTableView(_ tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier(at: indexPath))
+        
+        if (cell == nil) {
+            cell = UITableViewCell.init(style: .default, reuseIdentifier: self.cellIdentifier(at: indexPath))
+        }
+        
+        return cell!
     }
-    */
-
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return stores.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.nextCellForTableView(tableView, at: indexPath) as! ExploreTableCell
+        let store = stores[indexPath.row]
+        cell.fillCell(store, currencyFormatter)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if sizeClass().horizontal == .compact {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
