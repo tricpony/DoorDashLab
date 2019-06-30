@@ -47,13 +47,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qft-kf-EXd">
                                                     <rect key="frame" x="0.0" y="25.5" width="210" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-TI-kKe">
                                                     <rect key="frame" x="0.0" y="46" width="210" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -79,12 +79,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="deliveryChargeLabel" destination="may-TI-kKe" id="IoN-KV-hjI"/>
+                                    <outlet property="deliveryFeeLabel" destination="may-TI-kKe" id="IoN-KV-hjI"/>
                                     <outlet property="deliveryTimeLabel" destination="RrQ-Fo-s71" id="zNB-6k-o5C"/>
                                     <outlet property="logoImageView" destination="ORi-dl-ADS" id="roU-kq-7y5"/>
                                     <outlet property="pinWheel" destination="FW5-yv-71Y" id="WAd-mg-JJC"/>
                                     <outlet property="storeNameLabel" destination="VjA-eX-GEg" id="gMf-r0-sCC"/>
-                                    <outlet property="storeStyleLabel" destination="qft-kf-EXd" id="rWn-U2-Nop"/>
+                                    <outlet property="storeSummaryLabel" destination="qft-kf-EXd" id="rWn-U2-Nop"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

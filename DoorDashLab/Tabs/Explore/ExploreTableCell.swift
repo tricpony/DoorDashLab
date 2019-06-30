@@ -10,16 +10,22 @@ import UIKit
 
 class ExploreTableCell: UITableViewCell {
     @IBOutlet weak var storeNameLabel: UILabel!
-    @IBOutlet weak var storeStyleLabel: UILabel!
-    @IBOutlet weak var deliveryChargeLabel: UILabel!
+    @IBOutlet weak var storeSummaryLabel: UILabel!
+    @IBOutlet weak var deliveryFeeLabel: UILabel!
     @IBOutlet weak var deliveryTimeLabel: UILabel!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var pinWheel: UIActivityIndicatorView!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        storeSummaryLabel.textColor = #colorLiteral(red: 0.5704585314, green: 0.5704723597, blue: 0.5704649091, alpha: 1)
+        deliveryFeeLabel.textColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
+    }
+
     func fillCell(_ store: Store, _ currencyFormatter: Formatter) {
         storeNameLabel.text = store.formattedName
-        storeStyleLabel.text = store.summary
-        deliveryChargeLabel.text = store.formattedDeliveryFee(formatter: currencyFormatter)
+        storeSummaryLabel.text = store.summary
+        deliveryFeeLabel.text = store.formattedDeliveryFee(formatter: currencyFormatter)
         deliveryTimeLabel.text = store.formattedDeliveryTime
         guard let coverImageURL = store.coverImageURL else { return }
         guard let url = URL(string: coverImageURL) else { return }
