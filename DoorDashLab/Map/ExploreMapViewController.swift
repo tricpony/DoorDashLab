@@ -38,7 +38,7 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(CLLocation(latitude: at.latitude, longitude: at.longitude)) { [weak self] (placemarks, error) in
             guard let placemark = placemarks?.last else { return }
-            self?.mapView.addAnnotation(WrappedPlacemark(coordinate: at, placemark: placemark))
+            self?.mapView.addAnnotation(DraggablePlacemark(coordinate: at, placemark: placemark))
         }
     }
     
@@ -50,7 +50,7 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
             return pin
         } else {
             let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            guard let placemark = annotation as? WrappedPlacemark else {return pin }
+            guard let placemark = annotation as? DraggablePlacemark else {return pin }
             pin.calloutOffset = CGPoint(x: -10, y: -7)
             pin.canShowCallout = true
             pin.animatesDrop = true
@@ -73,7 +73,7 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
         case .ending, .canceling:
             view.transform = CGAffineTransform.identity
             view.dragState = .none
-            guard let placemark = view.annotation as? WrappedPlacemark else {return }
+            guard let placemark = view.annotation as? DraggablePlacemark else {return }
             coordinate = placemark.coordinate
             placemark.refreshPin(view) { [weak self] placemark in
                 self?.selectedAddressLabel.text = placemark?.flatAddress

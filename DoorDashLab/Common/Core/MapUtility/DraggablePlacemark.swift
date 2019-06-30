@@ -1,5 +1,5 @@
 //
-//  PrettyPlacemark.swift
+//  DraggablePlacemark.swift
 //  DoorDashLab
 //
 //  Created by aarthur on 6/29/19.
@@ -10,10 +10,10 @@ import UIKit
 import MapKit
 import Contacts
 
-typealias RefreshCompletion = (WrappedPlacemark?) -> Void
+typealias RefreshCompletion = (DraggablePlacemark?) -> Void
 
 /// Custom map annotation class that can be updated as the pin is dragged
-class WrappedPlacemark: NSObject, MKAnnotation {
+class DraggablePlacemark: NSObject, MKAnnotation {
     private var coord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     private var placemark: CLPlacemark? = nil
     var coordinate: CLLocationCoordinate2D {
