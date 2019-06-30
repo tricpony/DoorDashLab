@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SplitViewController: UISplitViewController, UISplitViewControllerDelegate {
+class SplitViewController: UISplitViewController, UISplitViewControllerDelegate, SizeClass {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,10 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
     // MARK: - UISplitViewControllerDelegate
     
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        let screenSizeClass = sizeClass()
+        if screenSizeClass.horizontal == .regular && screenSizeClass.vertical == .regular {
+            return false
+        }
         return true
     }
 }
