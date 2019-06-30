@@ -59,7 +59,7 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrQ-Fo-s71">
-                                            <rect key="frame" x="360" y="69.5" width="28" height="20.5"/>
+                                            <rect key="frame" x="354" y="69.5" width="28" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -73,9 +73,9 @@
                                         <constraint firstItem="RrQ-Fo-s71" firstAttribute="bottom" secondItem="xVR-yi-2xA" secondAttribute="bottom" id="a1C-Y1-WS5"/>
                                         <constraint firstAttribute="bottom" secondItem="xVR-yi-2xA" secondAttribute="bottom" constant="23.5" id="d0y-dQ-hhH"/>
                                         <constraint firstAttribute="trailing" secondItem="xVR-yi-2xA" secondAttribute="trailing" constant="54" id="df3-kc-Rz0"/>
-                                        <constraint firstItem="RrQ-Fo-s71" firstAttribute="leading" secondItem="xVR-yi-2xA" secondAttribute="trailing" id="hRG-C5-EQu"/>
+                                        <constraint firstItem="ORi-dl-ADS" firstAttribute="top" secondItem="xQs-aw-7ke" secondAttribute="top" constant="23.5" id="g2d-4P-WzP"/>
+                                        <constraint firstItem="RrQ-Fo-s71" firstAttribute="leading" secondItem="xVR-yi-2xA" secondAttribute="trailing" constant="-6" id="hRG-C5-EQu"/>
                                         <constraint firstItem="FW5-yv-71Y" firstAttribute="centerY" secondItem="ORi-dl-ADS" secondAttribute="centerY" id="heH-oc-AtP"/>
-                                        <constraint firstItem="ORi-dl-ADS" firstAttribute="centerY" secondItem="xQs-aw-7ke" secondAttribute="centerY" id="lv7-PL-dqc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -99,11 +99,13 @@
             </objects>
             <point key="canvasLocation" x="1081.1594202898552" y="-294.64285714285711"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Explore-->
         <scene sceneID="y7X-Zx-r9e">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eh7-qx-Jo7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" image="tab-explore" id="TgG-YU-Kfu"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kaK-Li-Bog">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,4 +120,7 @@
             <point key="canvasLocation" x="171.01449275362319" y="-294.64285714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab-explore" width="28" height="24"/>
+    </resources>
 </document>

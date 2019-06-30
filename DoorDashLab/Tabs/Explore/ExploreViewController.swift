@@ -32,7 +32,7 @@ class ExploreViewController: UITableViewController, SizeClass {
         tableView.tableFooterView = UIView()
         //enable auto cell height that uses constraints
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = 45
+        self.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {

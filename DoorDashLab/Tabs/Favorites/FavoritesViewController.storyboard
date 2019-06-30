@@ -38,11 +38,13 @@
             </objects>
             <point key="canvasLocation" x="1113.0434782608697" y="-273.21428571428572"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites-->
         <scene sceneID="8WK-Io-Vys">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mYb-ez-36c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="tab-star" id="daA-A5-JAX"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yka-6S-Pxb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -57,4 +59,7 @@
             <point key="canvasLocation" x="202.89855072463769" y="-273.21428571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab-star" width="28" height="24"/>
+    </resources>
 </document>

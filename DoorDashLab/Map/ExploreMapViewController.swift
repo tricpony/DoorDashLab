@@ -89,8 +89,7 @@ class ExploreMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             guard let navVC = viewControllers.first as? UINavigationController else { return }
             guard let vc = navVC.topViewController as? ExploreViewController else { return }
             vc.coordinate = coordinate
-                //this clears the title of the back button to leave only the chevron
-//                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            navigationItem.backBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "nav-address"), style: .plain, target: nil, action: nil)
         }
     }
 
