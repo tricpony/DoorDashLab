@@ -50,7 +50,7 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
             return pin
         } else {
             let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            guard let placemark = annotation as? DraggablePlacemark else {return pin }
+            guard let placemark = annotation as? DraggablePlacemark else {return nil }
             pin.calloutOffset = CGPoint(x: -10, y: -7)
             pin.canShowCallout = true
             pin.animatesDrop = true
