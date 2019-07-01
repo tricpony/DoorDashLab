@@ -32,6 +32,9 @@ class ExploreViewController: UITableViewController, SizeClass {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let textAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationItem.title = "DoorDash"
         //this will prevent bogus separator lines from displaying in an empty table
         tableView.tableFooterView = UIView()
         //enable auto cell height that uses constraints
