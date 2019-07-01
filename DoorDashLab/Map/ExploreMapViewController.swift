@@ -52,7 +52,8 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = MapPinAnnotationView.pin_id
         guard let placemark = annotation as? DraggablePlacemark else {return nil }
-
+        selectedAddressLabel.text = placemark.flatAddress
+        
         if let pin = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MapPinAnnotationView {
             pin.configure(pinInfo: placemark)
             return pin
