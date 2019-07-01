@@ -32,7 +32,7 @@ class DraggablePlacemark: NSObject, MKAnnotation {
     }
     
     var title: String? {
-        return "Delivering To:"
+        return NSLocalizedString("Delivering To:", comment: "Delivering To:")
     }
     
     /// Provide components of an address in an array
