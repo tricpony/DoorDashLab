@@ -15,7 +15,7 @@ typealias RefreshCompletion = (DraggablePlacemark?) -> Void
 /// Custom map annotation class that can be updated as the pin is dragged
 class DraggablePlacemark: NSObject, MKAnnotation {
     private var coord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-    private var placemark: CLPlacemark? = nil
+    var placemark: CLPlacemark? = nil
     var coordinate: CLLocationCoordinate2D {
         get {
             return coord

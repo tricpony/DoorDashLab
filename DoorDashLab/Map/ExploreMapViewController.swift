@@ -45,18 +45,32 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
     // MARK: - MKMapViewDelegate
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let identifier = "DoorDash"
-        if let pin = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+        let identifier = MapPinAnnotationView.pin_id
+        guard let placemark = annotation as? DraggablePlacemark else {return nil }
+
+        if let pin = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MapPinAnnotationView {
+            pin.configure(pinInfo: placemark)
             return pin
         } else {
-            let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            guard let placemark = annotation as? DraggablePlacemark else {return pin }
-            pin.calloutOffset = CGPoint(x: -10, y: -7)
-            pin.canShowCallout = true
-            pin.animatesDrop = true
-            pin.isDraggable = true
-            pin.loadCustomLines(customLines: placemark.addressLines ?? [])
-            selectedAddressLabel.text = placemark.flatAddress
+//            let pin = MapPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            let pin = MapPinAnnotationView.loadNib()
+            pin?.annotation = annotation
+            pin?.configure(pinInfo: placemark)
+//            guard let placemark = annotation as? DraggablePlacemark else {return pin }
+//            pin.calloutOffset = CGPoint(x: -10, y: -7)
+//            pin.canShowCallout = true
+//            pin.animatesDrop = true
+//            pin.isDraggable = true
+//            pin.loadCustomLines(customLines: placemark.addressLines ?? [])
+//            selectedAddressLabel.text = placemark.flatAddress
+//            let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+//            guard let placemark = annotation as? DraggablePlacemark else {return pin }
+//            pin.calloutOffset = CGPoint(x: -10, y: -7)
+//            pin.canShowCallout = true
+//            pin.animatesDrop = true
+//            pin.isDraggable = true
+//            pin.loadCustomLines(customLines: placemark.addressLines ?? [])
+//            selectedAddressLabel.text = placemark.flatAddress
             return pin
         }
     }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MapPinAnnotationView" customModule="DoorDashLab">
+            <rect key="frame" x="0.0" y="0.0" width="695" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav-address" translatesAutoresizingMaskIntoConstraints="NO" id="mf5-FY-mYw">
+                    <rect key="frame" x="12" y="29.5" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="X01-9a-MtB"/>
+                        <constraint firstAttribute="height" constant="42" id="dot-Tu-JdI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ve-Ri-lkU">
+                    <rect key="frame" x="86" y="17" width="586" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJu-bl-1oa">
+                    <rect key="frame" x="86" y="52.5" width="66.5" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rJu-bl-1oa" secondAttribute="bottom" constant="15" id="1xf-0p-Izr"/>
+                <constraint firstItem="5ve-Ri-lkU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="Car-si-iYB"/>
+                <constraint firstAttribute="trailing" secondItem="5ve-Ri-lkU" secondAttribute="trailing" constant="23" id="EtI-Kr-ekp"/>
+                <constraint firstItem="5ve-Ri-lkU" firstAttribute="leading" secondItem="mf5-FY-mYw" secondAttribute="trailing" constant="32" id="Pmw-xQ-8ea"/>
+                <constraint firstItem="rJu-bl-1oa" firstAttribute="leading" secondItem="5ve-Ri-lkU" secondAttribute="leading" id="Ueu-ch-cc2"/>
+                <constraint firstItem="rJu-bl-1oa" firstAttribute="top" secondItem="5ve-Ri-lkU" secondAttribute="bottom" constant="2" id="aQa-N6-VhA"/>
+                <constraint firstItem="mf5-FY-mYw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="q4s-qF-9jN"/>
+                <constraint firstItem="mf5-FY-mYw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tIf-9q-1cx"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cityStateZipLabel" destination="rJu-bl-1oa" id="V4n-R6-XZg"/>
+                <outlet property="streetLabel" destination="5ve-Ri-lkU" id="xCR-WN-9xv"/>
+            </connections>
+            <point key="canvasLocation" x="-394.92753623188406" y="-145.64732142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nav-address" width="24" height="20"/>
+    </resources>
+</document>
