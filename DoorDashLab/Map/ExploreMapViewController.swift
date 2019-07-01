@@ -17,9 +17,14 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
     let spotService = SpotLocatoinService()
     var coordinate: CLLocationCoordinate2D? = nil
 
+    func registerMapAssets() {
+        mapView.register(MapPinAnnotationView.self, forAnnotationViewWithReuseIdentifier: MapPinAnnotationView.pin_id)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNavItems()
+        registerMapAssets()
         title = NSLocalizedString("Choose an Address", comment: "Choose an Address")
         spotService.spot { [weak self] location in
             let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
@@ -45,18 +50,15 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
     // MARK: - MKMapViewDelegate
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let identifier = "DoorDash"
-        if let pin = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+        let identifier = MapPinAnnotationView.pin_id
+        guard let placemark = annotation as? DraggablePlacemark else {return nil }
+
+        if let pin = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MapPinAnnotationView {
+            pin.configure(pinInfo: placemark)
             return pin
         } else {
-            let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            guard let placemark = annotation as? DraggablePlacemark else {return nil }
-            pin.calloutOffset = CGPoint(x: -10, y: -7)
-            pin.canShowCallout = true
-            pin.animatesDrop = true
-            pin.isDraggable = true
-            pin.loadCustomLines(customLines: placemark.addressLines ?? [])
-            selectedAddressLabel.text = placemark.flatAddress
+            let pin = MapPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            pin.configure(pinInfo: placemark)
             return pin
         }
     }
