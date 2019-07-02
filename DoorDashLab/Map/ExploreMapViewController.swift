@@ -14,7 +14,7 @@ import Contacts
 class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigationBarAppearance {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var selectedAddressLabel: UILabel!
-    let spotService = SpotLocatoinService()
+    let spotService = SpotLocationService()
     var coordinate: CLLocationCoordinate2D? = nil
 
     func registerMapAssets() {

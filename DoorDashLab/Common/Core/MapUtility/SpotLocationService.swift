@@ -1,5 +1,5 @@
 //
-//  SpotLocatoinService.swift
+//  SpotLocationService.swift
 //  DoorDashLab
 //
 //  Created by aarthur on 6/29/19.
@@ -12,7 +12,7 @@ import MapKit
 typealias SpotCompletion = (CLLocationCoordinate2D) -> Void
 
 /// Convenience class to neatly enclose location service
-class SpotLocatoinService: NSObject, CLLocationManagerDelegate {
+class SpotLocationService: NSObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     var completion: SpotCompletion? = nil
     var isSuspended = false

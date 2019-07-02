@@ -14,7 +14,7 @@ import CoreData
 class ExploreViewControllerTests: XCTestCase {
     var exploreViewController: ExploreViewController!
     var featuresViewController: FavoritesViewController!
-    let spotService = SpotLocatoinService()
+    let spotService = SpotLocationService()
     var fetchedResultsController: NSFetchedResultsController<Store>!
     lazy var request: NSFetchRequest<Store> = {
         let request = NSFetchRequest<Store>(entityName: "Store")

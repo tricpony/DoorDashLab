@@ -10,7 +10,7 @@ import XCTest
 @testable import DoorDashLab
 
 class SpotLocatoinServiceTests: XCTestCase {
-    let spotService = SpotLocatoinService()
+    let spotService = SpotLocationService()
     
     func testSpotServiceIsSuspended() {
         spotService.suspend()
