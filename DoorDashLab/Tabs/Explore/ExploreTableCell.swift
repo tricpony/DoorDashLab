@@ -10,6 +10,7 @@ import UIKit
 
 /// Custom table cell class to display each store
 class ExploreTableCell: UITableViewCell {
+    static let reuseIdentifier = "ExploreTableCell"
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeSummaryLabel: UILabel!
     @IBOutlet weak var deliveryFeeLabel: UILabel!

@@ -39,6 +39,10 @@
 		D14BF22B22C8F72D0002F2D3 /* ExploreMapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22A22C8F72D0002F2D3 /* ExploreMapViewControllerTests.swift */; };
 		D14BF22D22C904290002F2D3 /* ExploreViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22C22C904290002F2D3 /* ExploreViewControllerTests.swift */; };
 		D14BF23122CA943E0002F2D3 /* MapPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF23022CA943E0002F2D3 /* MapPinAnnotationView.swift */; };
+		D14BF23722CC2DBE0002F2D3 /* BusyPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF23622CC2DBE0002F2D3 /* BusyPanel.swift */; };
+		D14BF23922CC2DD40002F2D3 /* BusyPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14BF23822CC2DD40002F2D3 /* BusyPanel.xib */; };
+		D14BF23B22CC37380002F2D3 /* PulsatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF23A22CC37380002F2D3 /* PulsatingLabel.swift */; };
+		D14BF23D22CC45800002F2D3 /* ExploreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14BF23C22CC45800002F2D3 /* ExploreTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,10 @@
 		D14BF22A22C8F72D0002F2D3 /* ExploreMapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMapViewControllerTests.swift; sourceTree = "<group>"; };
 		D14BF22C22C904290002F2D3 /* ExploreViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewControllerTests.swift; sourceTree = "<group>"; };
 		D14BF23022CA943E0002F2D3 /* MapPinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPinAnnotationView.swift; sourceTree = "<group>"; };
+		D14BF23622CC2DBE0002F2D3 /* BusyPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyPanel.swift; sourceTree = "<group>"; };
+		D14BF23822CC2DD40002F2D3 /* BusyPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusyPanel.xib; sourceTree = "<group>"; };
+		D14BF23A22CC37380002F2D3 /* PulsatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsatingLabel.swift; sourceTree = "<group>"; };
+		D14BF23C22CC45800002F2D3 /* ExploreTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +272,7 @@
 				D14BF1F322C61F570002F2D3 /* ExploreViewController.swift */,
 				D14BF1F922C61F990002F2D3 /* ExploreViewController.storyboard */,
 				D14BF21922C80E870002F2D3 /* ExploreTableCell.swift */,
+				D14BF23C22CC45800002F2D3 /* ExploreTableCell.xib */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 		D14BF1F022C61EBF0002F2D3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D14BF23522CC2D960002F2D3 /* Views */,
 				D14BF21222C773CC0002F2D3 /* MapUtility */,
 				D14BF20C22C63EB20002F2D3 /* URLImage.swift */,
 				D14BF20E22C6C8D10002F2D3 /* SplitViewController.swift */,
@@ -302,6 +312,16 @@
 				D14BF22222C8C5150002F2D3 /* DDNavigationBarAppearance.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D14BF23522CC2D960002F2D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D14BF23A22CC37380002F2D3 /* PulsatingLabel.swift */,
+				D14BF23622CC2DBE0002F2D3 /* BusyPanel.swift */,
+				D14BF23822CC2DD40002F2D3 /* BusyPanel.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +410,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14BF1CD22C61AC10002F2D3 /* LaunchScreen.storyboard in Resources */,
+				D14BF23922CC2DD40002F2D3 /* BusyPanel.xib in Resources */,
 				D14BF1CA22C61AC10002F2D3 /* Assets.xcassets in Resources */,
+				D14BF23D22CC45800002F2D3 /* ExploreTableCell.xib in Resources */,
 				D14BF21C22C816E20002F2D3 /* Tabs.storyboard in Resources */,
 				D14BF1FC22C6210E0002F2D3 /* ExploreMapViewController.storyboard in Resources */,
 				D14BF1C822C61ABF0002F2D3 /* Main.storyboard in Resources */,
@@ -478,6 +500,7 @@
 				D14BF20322C626CB0002F2D3 /* Store+CoreDataProperties.swift in Sources */,
 				D14BF1EC22C61C650002F2D3 /* DoorDashLab.xcdatamodeld in Sources */,
 				D14BF21422C774070002F2D3 /* SpotLocationService.swift in Sources */,
+				D14BF23B22CC37380002F2D3 /* PulsatingLabel.swift in Sources */,
 				D14BF1F222C61F010002F2D3 /* ExploreMapViewController.swift in Sources */,
 				D14BF1EB22C61C650002F2D3 /* AppDelegate.swift in Sources */,
 				D14BF20822C633140002F2D3 /* ServiceManager.swift in Sources */,
@@ -486,6 +509,7 @@
 				D14BF20422C626CB0002F2D3 /* Store+CoreDataClass.swift in Sources */,
 				D14BF23122CA943E0002F2D3 /* MapPinAnnotationView.swift in Sources */,
 				D14BF20622C633050002F2D3 /* API.swift in Sources */,
+				D14BF23722CC2DBE0002F2D3 /* BusyPanel.swift in Sources */,
 				D14BF21822C77AC50002F2D3 /* MKAnnotationView+Extension.swift in Sources */,
 				D14BF21E22C81D9A0002F2D3 /* UIViewController+Alerts.swift in Sources */,
 				D14BF1F422C61F570002F2D3 /* ExploreViewController.swift in Sources */,
