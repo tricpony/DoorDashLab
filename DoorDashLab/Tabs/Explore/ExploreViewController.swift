@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 import MagicalRecord
+import Alamofire
 
 /// Class to display results of store search API service
 class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, UITableViewDataSource {
@@ -25,6 +26,7 @@ class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, U
         currencyFormatter.locale = NSLocale.current
         return currencyFormatter
     }()
+    var sessionManager: SessionManager?
     @IBOutlet weak var busyPanel: BusyPanel!
     private var stores = [Store]()
     var coordinate: CLLocationCoordinate2D? = nil
@@ -69,7 +71,7 @@ class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, U
         guard let coordinate = coordinate else { return }
         view.bringSubviewToFront(busyPanel)
         busyPanel.startAnimating()
-        ServiceManager().startStoreSearchService(lat: coordinate.latitude, lng: coordinate.longitude) { [weak self] data, error in
+        sessionManager = ServiceManager().startStoreSearchService(lat: coordinate.latitude, lng: coordinate.longitude) { [weak self] data, error in
             self?.busyPanel.stopAnimating()
             if let data = data {
                 guard let fetchedStores = JsonUtility<Store>.parseJSON(data, ctx: self?.managedObjectContext) else { return }
