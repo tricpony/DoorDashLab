@@ -31,6 +31,11 @@ class FavoritesViewController: UITableViewController, SizeClass {
         configUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configUI()
+    }
+
     func applyStyle() {
         let textAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)]
         tabBarController?.navigationController?.navigationBar.titleTextAttributes = textAttributes

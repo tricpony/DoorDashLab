@@ -42,12 +42,12 @@ class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         registerTableAssets()
-        configUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         performStoreService()
+        configUI()
     }
 
     func applyStyle() {
