@@ -11,7 +11,7 @@ import MapKit
 import Contacts
 
 /// Class to display a map with a draggable pin defaulting to the current location of device
-class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigationBarAppearance {
+class ExploreMapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var selectedAddressLabel: UILabel!
     let spotService = SpotLocationService()
@@ -23,7 +23,6 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadNavItems()
         registerMapAssets()
         title = NSLocalizedString("Choose an Address", comment: "Choose an Address")
         spotService.spot { [weak self] location in
@@ -34,6 +33,16 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
             self?.pinMap(at: location)
             self?.coordinate = location
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        applyStyle()
+    }
+    
+    func applyStyle() {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
 
     /// Pins the map at the user's current location
@@ -86,6 +95,14 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
         }
     }
     
+    // MARK: - Unwind
+    
+    @IBAction func prepareForUnwind(seque: UIStoryboardSegue) {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)]
+        seque.source.tabBarController?.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        seque.source.tabBarController?.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+    
     // MARK: - Storyboard
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -95,6 +112,16 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate, DDNavigatio
             guard let navVC = viewControllers.first as? UINavigationController else { return }
             guard let vc = navVC.topViewController as? ExploreViewController else { return }
             vc.coordinate = coordinate
+            
+            // setup nav bar
+            let backButtonImage = #imageLiteral(resourceName: "nav-address")
+            let imageView = UIImageView(image: backButtonImage)
+            let tapGesture = UITapGestureRecognizer(target: vc, action: #selector(ExploreViewController.pop(_:)))
+            
+            imageView.addGestureRecognizer(tapGesture)
+            let backBarButton = UIBarButtonItem(customView: imageView)
+            tabVC.navigationItem.setHidesBackButton(true, animated: false)
+            tabVC.navigationItem.leftBarButtonItem = backBarButton
         }
     }
 

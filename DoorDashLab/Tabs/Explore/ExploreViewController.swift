@@ -81,14 +81,20 @@ class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, U
             } else {
                 let message = NSLocalizedString("There was a problem with your request.  Please try again later.", comment: "Service error alert")
                 self?.presentOkAlert(title: NSLocalizedString("Alert", comment: "Alert"), message: message, completion: { button in
-                    self?.dismiss(animated: true, completion: nil)
+                    self?.performSegue(withIdentifier: "unwindSegue", sender: nil)
                 })
             }
         }
     }
 
-    // MARK: - Table View
+    // MARK: - Perform Unwind
     
+    @IBAction func pop(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSegue", sender: nil)
+    }
+    
+    // MARK: - Table View
+
     func cellIdentifier(at indexPath: IndexPath) -> String {
         return ExploreTableCell.reuseIdentifier
     }
@@ -124,3 +130,9 @@ class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, U
         }
     }
 }
+
+//extension ExploreViewController: DDNavigationBarAppearance {
+//    @objc func pop(_ sender: Any) {
+//        performSegue(withIdentifier: "unwindSegue", sender: nil)
+//    }
+//}

@@ -34,7 +34,6 @@
 		D14BF21C22C816E20002F2D3 /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14BF21B22C816E20002F2D3 /* Tabs.storyboard */; };
 		D14BF21E22C81D9A0002F2D3 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF21D22C81D9A0002F2D3 /* UIViewController+Alerts.swift */; };
 		D14BF22122C823A00002F2D3 /* SizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22022C823A00002F2D3 /* SizeClass.swift */; };
-		D14BF22322C8C5150002F2D3 /* DDNavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22222C8C5150002F2D3 /* DDNavigationBarAppearance.swift */; };
 		D14BF22922C8F5BA0002F2D3 /* SpotLocatoinServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22822C8F5BA0002F2D3 /* SpotLocatoinServiceTests.swift */; };
 		D14BF22B22C8F72D0002F2D3 /* ExploreMapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22A22C8F72D0002F2D3 /* ExploreMapViewControllerTests.swift */; };
 		D14BF22D22C904290002F2D3 /* ExploreViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14BF22C22C904290002F2D3 /* ExploreViewControllerTests.swift */; };
@@ -91,7 +90,6 @@
 		D14BF21B22C816E20002F2D3 /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
 		D14BF21D22C81D9A0002F2D3 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		D14BF22022C823A00002F2D3 /* SizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClass.swift; sourceTree = "<group>"; };
-		D14BF22222C8C5150002F2D3 /* DDNavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDNavigationBarAppearance.swift; sourceTree = "<group>"; };
 		D14BF22822C8F5BA0002F2D3 /* SpotLocatoinServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotLocatoinServiceTests.swift; sourceTree = "<group>"; };
 		D14BF22A22C8F72D0002F2D3 /* ExploreMapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMapViewControllerTests.swift; sourceTree = "<group>"; };
 		D14BF22C22C904290002F2D3 /* ExploreViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewControllerTests.swift; sourceTree = "<group>"; };
@@ -309,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				D14BF22022C823A00002F2D3 /* SizeClass.swift */,
-				D14BF22222C8C5150002F2D3 /* DDNavigationBarAppearance.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 				D14BF1F422C61F570002F2D3 /* ExploreViewController.swift in Sources */,
 				D14BF20D22C63EB20002F2D3 /* URLImage.swift in Sources */,
 				D14BF20F22C6C8D10002F2D3 /* SplitViewController.swift in Sources */,
-				D14BF22322C8C5150002F2D3 /* DDNavigationBarAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

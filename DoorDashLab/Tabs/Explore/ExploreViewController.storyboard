@@ -54,9 +54,11 @@
                     <connections>
                         <outlet property="busyPanel" destination="nAt-BD-JVX" id="Ahf-FU-BhX"/>
                         <outlet property="tableView" destination="sYm-B1-NFk" id="j0b-4k-wxz"/>
+                        <segue destination="8Ox-fU-rNC" kind="unwind" identifier="unwindSegue" unwindAction="prepareForUnwindWithSeque:" id="Hit-bo-WGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vp9-3n-0Bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8Ox-fU-rNC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1138" y="-295"/>
         </scene>
