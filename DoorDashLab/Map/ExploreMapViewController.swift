@@ -35,16 +35,6 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate {
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        applyStyle()
-    }
-    
-    func applyStyle() {
-        let textAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-    }
-
     /// Pins the map at the user's current location
     /// - Parameters:
     ///   - at: Latitude & longitude location of user
