@@ -95,6 +95,17 @@ class ExploreMapViewController: UIViewController, MKMapViewDelegate {
     
     // MARK: - Storyboard
 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "detailSegue" {
+            if spotService.accessAllowed() == false {
+                presentOkAlert(title: "Feature Not Available", message: "You have denied access to map services.", completion: nil)
+            } else {
+                return true
+            }
+        }
+        return false
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailSegue" {
             guard let tabVC = segue.destination as? UITabBarController else { return }

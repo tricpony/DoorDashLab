@@ -46,6 +46,15 @@ class SpotLocationService: NSObject, CLLocationManagerDelegate {
         }
     }
 
+    func accessAllowed() -> Bool {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse, .authorizedAlways:
+            return true
+        default:
+            return false
+        }
+    }
+    
     private func enableLocationServices() {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
