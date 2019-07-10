@@ -130,9 +130,3 @@ class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, U
         }
     }
 }
-
-//extension ExploreViewController: DDNavigationBarAppearance {
-//    @objc func pop(_ sender: Any) {
-//        performSegue(withIdentifier: "unwindSegue", sender: nil)
-//    }
-//}
