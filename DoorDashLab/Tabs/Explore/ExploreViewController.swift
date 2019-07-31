@@ -71,18 +71,20 @@ class ExploreViewController: UIViewController, SizeClass, UITableViewDelegate, U
         guard let coordinate = coordinate else { return }
         view.bringSubviewToFront(busyPanel)
         busyPanel.startAnimating()
-        sessionManager = ServiceManager().startStoreSearchService(lat: coordinate.latitude, lng: coordinate.longitude) { [weak self] data, error in
+        sessionManager = ServiceManager().startStoreSearchService(lat: coordinate.latitude, lng: coordinate.longitude) { [weak self] result in
             self?.busyPanel.stopAnimating()
-            if let data = data {
+            switch result {
+            case .success(let data):
                 guard let fetchedStores = JsonUtility<Store>.parseJSON(data, ctx: self?.managedObjectContext) else { return }
                 self?.stores = fetchedStores
                 self?.tableView.reloadData()
                 self?.managedObjectContext.mr_saveToPersistentStore(completion: nil)
-            } else {
+            case .failure(let error):
                 let message = NSLocalizedString("There was a problem with your request.  Please try again later.", comment: "Service error alert")
                 self?.presentOkAlert(title: NSLocalizedString("Alert", comment: "Alert"), message: message, completion: { button in
                     self?.performSegue(withIdentifier: "unwindSegue", sender: nil)
                 })
+                print("Service Failed: \(String(describing: error))")
             }
         }
     }

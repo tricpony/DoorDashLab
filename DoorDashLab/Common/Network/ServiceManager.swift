@@ -17,7 +17,7 @@ struct ServiceManager {
     ///   - lat: latitude value
     ///   - lng: longiture value
     ///   - completion: call back closure returning either service success with payload or failure
-    func startStoreSearchService(lat: Double, lng: Double, completion:@escaping (Data?, Error?)->()) -> SessionManager? {
+    func startStoreSearchService(lat: Double, lng: Double, completion:@escaping (Swift.Result<Data, Error>)->()) -> SessionManager? {
         guard let url = URL(string: API_Method.store_search.serviceAddress()) else { return nil }
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = TimeInterval(7)
@@ -29,11 +29,10 @@ struct ServiceManager {
             .validate()
             .responseData { response in
                 guard response.result.isSuccess else {
-                    print("Service Failed: \(String(describing: response.result.error))")
-                    completion(nil, response.result.error)
+                    completion(.failure(response.result.error!))
                     return
                 }
-                completion(response.result.value, nil)
+                completion(.success(response.result.value!))
         }.resume()
         return sessionManager
     }
